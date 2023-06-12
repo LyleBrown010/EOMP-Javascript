@@ -84,9 +84,19 @@ light - FFEEB3 */
 }
 /* Navigation end */
 
+/* main section start */
+#about-section{
+    background-color: #FFEEB3 ;
+}
+
+#image-section{
+    background-color: #FFD230;
+}
 
 /* footer start */
 #footer-copyright{
     background-color: #FFD230;
+    width: 100%;
+    margin-right: 0px !important;
 }
 /* footer end */
