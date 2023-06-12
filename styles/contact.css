@@ -85,16 +85,21 @@ light - FFEEB3 */
 /* Navigation end */
 
 /* Contact-form */
+.main-section{
+    height: 81.5vh;
+}
 .contact-form{
     padding: 10px;
-    height: 50vh;
+    height: 90%;
     border: 2px solid black;
     border-radius: 50px;
     background-color: #FFD230;
+
 }
 
 #outer-contactform{
     background-color: #FFEEB3;
+    height: 580px;
 }
 
 #form{
