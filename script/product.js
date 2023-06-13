@@ -53,18 +53,77 @@ function displayProducts(){
     const myProducts = document.getElementById("products");
     products.forEach((product) => {
         const productElement = document.createElement("div");
-        productElement.innerHTML = `
-        <div class="row">
-        <div class="col-3 card">
-        <img id="photo" src="${product.image}" alt="${product.name}">
-        <h2>${product.name}</h2>
-        <p>R ${product.price}</p>
+        productElement.innerHTML = `       
+        <div class="card mb-3" style="max-width: 550px; height: 180px">
+        <div class="row g-0">
+        <div class="col-md-4">
+        <img src="${product.image}" class="img-fluid rounded-start" alt="${product.name}">
+        </div>
+        <div class="col-md-8">
+        <div class="card-body">
+        <h5 class="card-title">${product.name}</h5>
+        <p class="card-text">description</p>
+        <p class="card-text"><small class="text-body-secondary">R ${product.price}.00</small></p>
         <button id="btnAddToCart" class="m-2" onclick="addToCart(${product.id})">ADD TO CART</button>
         </div>
-        </div>        
+        </div>
+        </div>
+        </div>
         `;
         myProducts.appendChild(productElement);
 
     });
 }
 displayProducts();
+
+let cart = JSON.parse(localStorage.getItem("Products")) || [];
+
+function addToCart(productID){
+    const product = products.find((product) => product.id === productID);
+
+    if (product && product.quantity > 0){
+        cart.push(product);
+        product.quantity--;
+        updateCart();
+    }
+    // setItems();
+}
+
+function removeCart(index){
+    let remove = cart.splice(index, 1)[0];
+    remove.quantity++;
+    updateCart();
+}
+
+function updateCart(){
+    const cartContainer = document.getElementById("cartContainer");
+    localStorage.setItem("Products", JSON.stringify(cart));
+    cartContainer.innerHTML = "";
+    cart.forEach((product, index) => {
+        const cartItem = document.createElement("div");
+        cartItem.innerHTML = `
+        <span>${product.name}</span>
+        <span>${product.price}</span>
+        <p>total ${product.price}</p>
+        <button onclick="removeCart(${index})" class="rembutton">X</button>
+
+        
+        
+        `;
+        cartContainer.appendChild(cartItem);
+    });
+    calculateTotal();
+
+};
+
+function calculateTotal(){
+    let totalElement = document.getElementById("total");
+    let total = 0 
+    cart.forEach(item => {
+        total += eval(item.price)
+    })
+    totalElement.textContent = `${total}`
+}
+updateCart();
+
+
