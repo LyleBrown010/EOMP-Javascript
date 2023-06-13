@@ -84,6 +84,42 @@ light - FFEEB3 */
 }
 /* Navigation end */
 
+/* main section start */
+
+
+
+/* main section end */
+main{
+    background-color: #ffeeb3 ;
+}
+
+#product-title{
+    text-align: center;
+}
+
+#bar{
+    background-color: #FFD230;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+ul{
+    list-style: none !important;
+    text-decoration: none !important;
+}
+li{
+    list-style: none;
+    text-decoration: none !important;
+}
+
+
+#btnAddToCart{
+    border-radius: 20px;
+    background-color: #FFD230;
+}
+
 
 /* footer start */
 #footer-copyright{
