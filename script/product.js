@@ -104,11 +104,9 @@ function updateCart(){
         cartItem.innerHTML = `
         <span>${product.name}</span>
         <span>${product.price}</span>
+        <span>${product.image}</span>
         <p>total ${product.price}</p>
         <button onclick="removeCart(${index})" class="rembutton">X</button>
-
-        
-        
         `;
         cartContainer.appendChild(cartItem);
     });
@@ -132,8 +130,8 @@ updateCart();
     
 // }
 
-function hatsFilter(){
+// function hatsFilter(){
     
-}
+// }
 
 
