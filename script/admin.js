@@ -22,13 +22,13 @@ function displayList(){
         <tr>
         <td>${product.image}</td>
         <td>${product.name}</td>
-        <td>${product.price}</td>
-
+        <td>${product.price}</td>m]
+        
         </tr>
         `;
     })
 }
-displayList();
+displayList(); 
 
 
 
