@@ -126,4 +126,14 @@ function calculateTotal(){
 }
 updateCart();
 
+// function hatsFilter(){
+//     let hatSelect = document.getElementById("hats");
+//     console.log(hatsFilter);
+    
+// }
+
+function hatsFilter(){
+    
+}
+
 
