@@ -45,5 +45,5 @@ function clearCart(){
     location.reload();
 }
 
-const clearBtn = document.getElementById("clearCart")
+const clearBtn = document.getElementById("clearAll")
 clearBtn.addEventListener("click", clearCart);
