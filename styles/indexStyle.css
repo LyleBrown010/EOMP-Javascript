@@ -27,6 +27,13 @@ light - FFEEB3 */
     #navbar-right{
         float: none !important;
     }
+
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        width: 1000px;
+        
+    }
 }
 /* Navigation end */
 #cat-hats, #cat-pants, #cat-jumpers{

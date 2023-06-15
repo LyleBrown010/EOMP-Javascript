@@ -60,6 +60,8 @@ function dispTable(){
         <td><img src="${item.image}" alt="${item.id}" loading="lazy"></td>
         <td>${item.name}</td>
         <td>${item.price}</td>
+        <button onclick="editProduct()">Edit Product</button>
+        <button onclick="deleteProduct()">delete</button>
         `;
         myStock.appendChild(stockElement);
         
@@ -70,3 +72,36 @@ function dispTable(){
 }
 
 document.onload = dispTable();
+
+// add 
+let addProduct = document.getElementById(addProduct);
+
+addProduct.addEventListener('click', () => {
+    try{
+        const image; 
+        const name; 
+        const price; 
+        const category;
+        const quantity; 
+
+        let id = myStock((stock) => stock.id.at(-1) >= 1
+        ? myStock((stock) => book.id).at(-1) : 0);
+        id++; 
+    }
+    catch(error){
+        console.error("can not add new product", error);
+    }
+})
+
+// edit
+function editProduct(){
+
+}
+
+// delete 
+function deleteProduct(){
+    stock = JSON.parse(localStorage.getItem('products'));
+    stock = splice (index, 1);
+    localStorage.setItem('products', JSON.stringify(stock));
+    dispTable()
+}

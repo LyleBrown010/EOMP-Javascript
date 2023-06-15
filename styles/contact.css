@@ -27,6 +27,14 @@ light - FFEEB3 */
     #navbar-right{
         float: none !important;
     }
+    #outer-contactform{
+        width: 100%;
+    }
+
+    #map-section{
+        width: 100%;
+    }
+    
 
 
     
@@ -50,7 +58,7 @@ light - FFEEB3 */
 
 #outer-contactform{
     background-color: #FFEEB3;
-    height: 580px;
+    height: 500px;
 }
 
 #form{

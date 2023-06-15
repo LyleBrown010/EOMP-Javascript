@@ -27,6 +27,10 @@ light - FFEEB3 */
     #navbar-right{
         float: none !important;
     }
+    .products{
+        max-width: 100%;
+        
+    }
 }
 /* Navigation end */
 
