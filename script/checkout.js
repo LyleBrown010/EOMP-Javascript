@@ -37,3 +37,13 @@ function total(){
     price.textContent = `Total Price: R${(totalCash)}`
 }
 
+function clearCart(){
+    localStorage.clear();
+
+    alert("thank you for your purchase");
+
+    location.reload();
+}
+
+const clearBtn = document.getElementById("clearCart")
+clearBtn.addEventListener("click", clearCart);
