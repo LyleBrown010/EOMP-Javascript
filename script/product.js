@@ -124,6 +124,19 @@ function calculateTotal(){
 }
 updateCart();
 
+function categoryFilter(){
+    let type = document.querySelector('#categoryFilter').ariaValueMax;
+    console.log(categoryFilter);
+    if (type == "all"){
+        displayProducts(products); 
+        return;
+    }
+    let filteredCategories = products.filter((products) =>{
+        return products.type == type; 
+    }); 
+    displayProducts(filteredCategories); 
+}
+
 // function hatsFilter(){
 //     let hatSelect = document.getElementById("hats");
 //     console.log(hatsFilter);

@@ -16,6 +16,7 @@ function checkout(){
         <img src ${products.image}></img>
         <h4>${products.name}</h4>
         <p>${products.price}</p>
+        <button onclick="cartRemove(${index})" class="rem-btn">x</button>
         `;
 
         checkoutList.appendChild(cartList);

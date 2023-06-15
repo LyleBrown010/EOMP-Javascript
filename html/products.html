@@ -92,7 +92,7 @@
         <div>
             <div class="row" id="bar">
                 <div class="col-6">
-                    <li class="dropdown">
+                    <!-- <li class="dropdown">
                     <a class="dropdown-toggle text-black text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         SORT
                     </a>
@@ -100,10 +100,19 @@
                         <li><button class="dropdown-item" href="#">PRICE LOW TO HIGH</button></li>
                         <li><button class="dropdown-item" href="#">PRICE HIGH TO LOW</button></li>
                     </ul>
-                    </li>
+                    </li> -->
+                    <p>FILTER</p>
+                    <div>
+                      <select name="categoryFilter" id="categoryFilter" onchange="categoryFilter()" class="filter">
+                        <option value="all">All</option>
+                        <option value="hats">Hats</option>
+                        <option value="pants">Pants</option>
+                        <option value="jumpers">Jumpers</option>
+                      </select>
+                    </div>
                 </div>
                 <div class="col-6">
-                    <li class="dropdown ">
+                    <!-- <li class="dropdown ">
                     <a class="dropdown-toggle text-black text-decoration-none" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       FILTER
                     </a>
@@ -112,7 +121,7 @@
                       <li><button class="dropdown-item" id="pants" href="#">PANTS</button></li>
                       <li><button class="dropdown-item" id="jumpers" href="#">JUMPERS</button></li>
                     </ul>
-                    </li>
+                    </li> -->
                 </div>
             </div>                     
         </div>
