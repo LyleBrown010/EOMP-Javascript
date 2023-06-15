@@ -104,11 +104,9 @@ function updateCart(){
         cartItem.innerHTML = `
         <span>${product.name}</span>
         <span>${product.price}</span>
+        <span>${product.image}</span>
         <p>total ${product.price}</p>
         <button onclick="removeCart(${index})" class="rembutton">X</button>
-
-        
-        
         `;
         cartContainer.appendChild(cartItem);
     });
@@ -125,5 +123,15 @@ function calculateTotal(){
     totalElement.textContent = `${total}`
 }
 updateCart();
+
+// function hatsFilter(){
+//     let hatSelect = document.getElementById("hats");
+//     console.log(hatsFilter);
+    
+// }
+
+// function hatsFilter(){
+    
+// }
 
 
