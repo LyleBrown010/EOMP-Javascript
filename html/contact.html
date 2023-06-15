@@ -5,9 +5,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/contact.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>CONTACT</title>
 </head>
 <body>
-    
+    <header>
+        <!-- <div class="topnav">
+                <a id="nav-left" href="/index.html">Home</a>
+                <a id="nav-left" href="./about.html">About</a>
+                <a id="nav-left" href="./contact.html">Contact</a>            
+                <a id="nav-center" href="/index.html">LOGO</a>
+                <a id="nav-right" href="./checkout.html">Cart</a>
+                <a id="nav-right" href="./admin.html">Admin</a>
+                <a id="nav-right" href="./products.html">Products</a>             
+        </div> -->
+
+        <nav class="navbar navbar-expand-lg " id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a id="nav-left" class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="nav-left" class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="nav-left" class="nav-link" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="nav-center" class="nav-link" href="#">LOGO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="nav-right-products" class="nav-link" href="#">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="nav-right-admin" class="nav-link" href="#">Admin</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id="nav-right-cart" class="nav-link" href="#">Cart</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav> 
+    </header>
+    <main class="main-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">ee</div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 border border-black" id="outer-contactform">
+                    <div class="contact-form m-4">
+                        <form action="https://formspree.io/f/xqkorzdj" method="POST" id="form">
+                            <label>Your Name: </label>
+                            <input type="text" name="name" required>
+                            <label>Your Email: </label>
+                            <input type="email" name="email" required>
+                            <label>Your Message:</label>
+                            <textarea name="message" required></textarea><br>
+                            <button id="button-submit" type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-6 border border-black text-white" id="map-section">
+                    <strong>VISIT US</strong>
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.4939012697437!2d18.45897129999999!3d-33.9284229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5de845f8b0f5%3A0xa7db30ce14a10d6d!2sHEARTY%20Collective!5e0!3m2!1sen!2sza!4v1686563874089!5m2!1sen!2sza" width="100%" height="100%" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <strong>COMPANY EMAIL</strong><br>
+                    <strong>COMPANY ADDRESS</strong><br>
+                    <strong>COMPANY CELL NUMBER</strong>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="m-0 p-0">
+        <div class="container text-center" id="social-icons">
+            <div class="social-icons">
+                <a class="btn btn-floating m-1" style="background-color: antiquewhite;" href=""><i class="bi bi-twitter"></i></a>
+                <a class="btn btn-floating m-1" style="background-color: antiquewhite;" href=""><i class="bi bi-instagram"> </i></a>
+                <a class="btn btn-floating m-1" style="background-color: antiquewhite;" href=""><i class="bi bi-google"> </i></a>
+                <a class="btn btn-floating m-1" style="background-color: antiquewhite;" href=""><i class="bi bi-facebook"> </i></a>
+            </div>
+        </div>
+        <div id="footer-copyright" class="container text-center">&copy; sonder wear, 2023</div>
+    </footer>
+
+    <!-- script tags -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
