@@ -94,14 +94,11 @@
                         <li><button class="dropdown-item" href="#">PRICE HIGH TO LOW</button></li>
                     </ul>
                     </li> -->
-                    <p>FILTER</p>
-                    <div>
-                      <select name="categoryFilter" id="categoryFilter" onchange="categoryFilter()" class="filter">
-                        <option value="all">All</option>
-                        <option value="hats">Hats</option>
-                        <option value="pants">Pants</option>
-                        <option value="jumpers">Jumpers</option>
-                      </select>
+                    <div class="text-center justify-content-center m-auto">
+                      <button id="hats" onclick="filterHat()">Hats</button>
+                      <button id="pants" onclick="filterPants()">Pants</button>
+                      <button id="jumper" onclick="filterJumper()">Jumper</button>
+
                     </div>
                 </div>
                 <div class="col-6">
@@ -155,10 +152,10 @@
     <footer class="m-0 p-0">
         <div class="text-center" id="social-icons">
             <div class="social-icons">
-                <a class="btn btn-floating m-1" style="background-color: #FFEEb3;" href=""><i class="bi bi-twitter"></i></a>
-                <a class="btn btn-floating m-1" style="background-color: #FFEEb3;" href=""><i class="bi bi-instagram"> </i></a>
-                <a class="btn btn-floating m-1" style="background-color: #FFEEb3;" href=""><i class="bi bi-google"> </i></a>
-                <a class="btn btn-floating m-1" style="background-color: #FFEEb3;" href=""><i class="bi bi-facebook"> </i></a>
+                <a class="btn btn-floating m-1" style="background-color: #FFD230 " href=""><i class="bi bi-twitter"></i></a>
+                <a class="btn btn-floating m-1" style="background-color: #FFD230 " href=""><i class="bi bi-instagram"> </i></a>
+                <a class="btn btn-floating m-1" style="background-color: #FFD230 " href=""><i class="bi bi-google"> </i></a>
+                <a class="btn btn-floating m-1" style="background-color: #FFD230 " href=""><i class="bi bi-facebook"> </i></a>
             </div>
         </div>
         <div id="footer-copyright" class="text-center">&copy; sonder wear, 2023</div>

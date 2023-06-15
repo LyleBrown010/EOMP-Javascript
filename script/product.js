@@ -49,7 +49,7 @@ const products = [
     }
 ];
 
-function displayProducts(){
+function displayProducts(products){
     const myProducts = document.getElementById("products");
     myProducts.innerHTML = "";
     products.forEach((product) => {
@@ -58,7 +58,7 @@ function displayProducts(){
         <div class="card mb-3" style="max-width: 550px; height: 180px">
         <div class="row g-0">
         <div class="col-md-4" id="card">
-        <img src="${product.image}" class="img-fluid rounded-start" alt="${product.name}">
+        <img id="img" src="${product.image}" class="img-fluid rounded-start" alt="${product.name}">
         </div>
         <div class="col-md-8">
         <div class="card-body">
@@ -75,9 +75,23 @@ function displayProducts(){
 
     });
 }
-displayProducts();
+displayProducts(products);
 
 let cart = JSON.parse(localStorage.getItem("Products")) || [];
+
+// filter by category
+function filterHat(){
+    let filterProducts = products.filter((product) => product.category === "hat");
+    displayProducts(filterProducts)
+}
+function filterJumper(){
+    let filterProducts = products.filter((product) => product.category === "jumper");
+    displayProducts(filterProducts)
+}
+function filterPants(){
+    let filterProducts = products.filter((product) => product.category === "pants");
+    displayProducts(filterProducts)
+}
 
 function addToCart(productID){
     const product = products.find((product) => product.id === productID);
@@ -87,7 +101,6 @@ function addToCart(productID){
         product.quantity--;
         updateCart();
     }
-    // setItems();
 }
 
 function removeCart(index){
@@ -104,9 +117,8 @@ function updateCart(){
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
         <span>${product.name}</span>
-        <img src="${product.price}"/>
-        <span>${product.image}</span>
-        <p>total ${product.price}</p>
+        <img src="${product.image}"/>
+        <p>Total R ${product.price}</p>
         <button onclick="removeCart(${index})" class="rembutton">X</button>
         `;
         cartContainer.appendChild(cartItem);
@@ -129,35 +141,11 @@ function checkout() {
     const modalFooter = document.querySelector(".modal-footer");
     modalFooter.innerHTML = `
       <div class="tick-animation" >
-        <img src="https://i.postimg.cc/wxhvCdcV/green-tick-checkbox-illustration-isolated-on-white-background-free-vector.jpg" alt="Tick" style="width: 400px;">
         <p>Checkout successful!</p>
       </div>
     `;
     cart = [];
     updateCart();
   }
-
-// function categoryFilter(){
-//     let type = document.querySelector('#categoryFilter').ariaValueMax;
-//     console.log(categoryFilter);
-//     if (type == "all"){
-//         displayProducts(products); 
-//         return;
-//     }
-//     let filteredCategories = products.filter((products) =>{
-//         return products.type == type; 
-//     }); 
-//     displayProducts(filteredCategories); 
-// }
-
-// function hatsFilter(){
-//     let hatSelect = document.getElementById("hats");
-//     console.log(hatsFilter);
-    
-// }
-
-// function hatsFilter(){
-    
-// }
 
 

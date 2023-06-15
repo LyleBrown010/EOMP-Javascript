@@ -29,7 +29,24 @@ light - FFEEB3 */
     }
 }
 /* Navigation end */
+#cat-hats, #cat-pants, #cat-jumpers{
+    padding: 2%;
+}
 
+.card-body{
+    padding: 2%;
+}
+
+#img-front{
+    width: 100%;
+    height: 90%;
+}
+
+button{
+    border-radius: 12px;
+    padding: 0.5%;
+    background-color: #FFD230;
+}
 
 /* footer start */
 #footer-copyright{
