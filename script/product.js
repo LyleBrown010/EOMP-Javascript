@@ -104,7 +104,7 @@ function updateCart(){
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
         <span>${product.name}</span>
-        <span>${product.price}</span>
+        <img src="${product.price}"/>
         <span>${product.image}</span>
         <p>total ${product.price}</p>
         <button onclick="removeCart(${index})" class="rembutton">X</button>

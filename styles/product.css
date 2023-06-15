@@ -84,7 +84,17 @@ li{
     padding: 10px;
     text-align: center;
 }
+/* modal start */
+.modal-header{
+    background-color: #FFD230;
+}
 
+#cartContainer{
+    background-color: #ffeeb3;
+    text-align: center;
+}
+
+/* modal end */
 
 
 
