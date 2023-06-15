@@ -57,7 +57,7 @@ function displayProducts(){
         productElement.innerHTML = `       
         <div class="card mb-3" style="max-width: 550px; height: 180px">
         <div class="row g-0">
-        <div class="col-md-4">
+        <div class="col-md-4" id="card">
         <img src="${product.image}" class="img-fluid rounded-start" alt="${product.name}">
         </div>
         <div class="col-md-8">

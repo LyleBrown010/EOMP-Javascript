@@ -73,7 +73,8 @@ li{
 } */
 #products {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto;
+    
     grid-gap: 2%;
     align-items: center;
     justify-content: center;
