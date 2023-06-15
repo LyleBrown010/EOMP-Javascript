@@ -31,7 +31,7 @@
 // displayList(); 
 
 
-let stock = JSON.parse(localStorage.getItem("stock"))?JSON.parse(localStorage.getItem("stock")):[
+let stock = JSON.parse(localStorage.getItem("newStock"))?JSON.parse(localStorage.getItem("stock")):[
     {
         id: 1 , 
         image: "https://i.postimg.cc/gXp1NkRr/Mountain-Sweater.jpg", 
@@ -81,9 +81,28 @@ let stock = JSON.parse(localStorage.getItem("stock"))?JSON.parse(localStorage.ge
         quantity: "20"
     }
 ]; 
-localStorage.setItem("stock", JSON.stringify(stock));
 
-function 
+
+function dispTable(){
+    const myStock = document.getElementById('admin');
+    myStock.innerHTML = ""; 
+    stock.forEach((item) => {
+        const stockElement = document.createElement("tr");
+        stockElement.innerHTML += `
+        
+        <td><img src="${item.image}" alt="${item.id}" loading="lazy"></td>
+        <td>${item.name}</td>
+        <td>${item.price}</td>
+        `;
+        myStock.appendChild(stockElement);
+        
+
+    });
+    
+    localStorage.setItem("newStock", JSON.stringify(myStock));
+}
+
+document.onload = dispTable();
 
 
 

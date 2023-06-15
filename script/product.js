@@ -51,6 +51,7 @@ const products = [
 
 function displayProducts(){
     const myProducts = document.getElementById("products");
+    myProducts.innerHTML = "";
     products.forEach((product) => {
         const productElement = document.createElement("div");
         productElement.innerHTML = `       
@@ -124,18 +125,30 @@ function calculateTotal(){
 }
 updateCart();
 
-function categoryFilter(){
-    let type = document.querySelector('#categoryFilter').ariaValueMax;
-    console.log(categoryFilter);
-    if (type == "all"){
-        displayProducts(products); 
-        return;
-    }
-    let filteredCategories = products.filter((products) =>{
-        return products.type == type; 
-    }); 
-    displayProducts(filteredCategories); 
-}
+function checkout() {
+    const modalFooter = document.querySelector(".modal-footer");
+    modalFooter.innerHTML = `
+      <div class="tick-animation" >
+        <img src="https://i.postimg.cc/wxhvCdcV/green-tick-checkbox-illustration-isolated-on-white-background-free-vector.jpg" alt="Tick" style="width: 400px;">
+        <p>Checkout successful!</p>
+      </div>
+    `;
+    cart = [];
+    updateCart();
+  }
+
+// function categoryFilter(){
+//     let type = document.querySelector('#categoryFilter').ariaValueMax;
+//     console.log(categoryFilter);
+//     if (type == "all"){
+//         displayProducts(products); 
+//         return;
+//     }
+//     let filteredCategories = products.filter((products) =>{
+//         return products.type == type; 
+//     }); 
+//     displayProducts(filteredCategories); 
+// }
 
 // function hatsFilter(){
 //     let hatSelect = document.getElementById("hats");
