@@ -7,46 +7,11 @@ light - FFEEB3 */
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Navigation Start */
-/* .topnav{
-    background-color: #FFD230 ;
-    overflow: hidden;
-} */
+/* navigation start */
 #navbar{
     background-color: #FFD230;
 }
-#nav-left{
-    float: left;
-}
 
-#nav-right{
-    float: right;
-    /* position: fixed;
-    left: 90%; */
-}
-
-#nav-right-products{
-    position: fixed;
-    left: 84%;
-}
-#nav-right-admin{
-    position: fixed;
-    left: 90%;
-}
-#nav-right-cart{
-    position: fixed;
-    left: 95%;
-}
-
-#nav-center{
-    position: fixed;
-    /* top: 50%; */
-    left: 47.5%;
-    /* right: 50%; */
-    /* margin-top: -100px; */
-    /* margin-left: -100px; */
-}
 
 #nav-left, #nav-right, #nav-center,
 #nav-right-products, 
@@ -59,27 +24,8 @@ light - FFEEB3 */
 }
 
 @media only screen and (max-width: 992px ){
-    #nav-left{
-        float: none;
-    }
-    
-    
-    #nav-right-products{
-        position: relative;
-        left: 0%;
-    }
-    #nav-right-admin{
-        position: relative;
-        left: 0%;
-    }
-    #nav-right-cart{
-        position: relative;
-        left: 0%;
-    }
-    
-    #nav-center{
-        position: relative;
-        left: 0;
+    #navbar-right{
+        float: none !important;
     }
 }
 /* Navigation end */
